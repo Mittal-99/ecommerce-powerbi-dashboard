@@ -1,6 +1,6 @@
 %=======================================================================
 %  Anushi Mittal — Data & BI Analyst Resume
-%  Single-page, ATS-friendly LaTeX template (STAR-format experience)
+%  Single-page, ATS-friendly LaTeX template (STAR-structured experience bullets)
 %  Compile with:  pdflatex Anushi_Mittal_Resume.tex
 %=======================================================================
 \documentclass[a4paper,10pt]{article}
@@ -57,9 +57,6 @@
 }
 
 %------------------------- HELPERS -------------------------------------
-% STAR label used inside work-experience bullets
-\newcommand{\sar}[1]{\textbf{\textcolor{accent}{#1:}}}
-
 % Two-column heading row: {left content}{right content}
 \newcommand{\headrow}[2]{%
   \begin{tabularx}{\textwidth}{@{}L r@{}}
@@ -109,43 +106,27 @@ Owns the full Power BI lifecycle — Star Schema modelling, DAX, Power Query, pr
 40\% and retiring manual Excel reporting. Advanced SQL on 1M+ row datasets with Python (Pandas) ETL automation and KPI design.
 
 %------------------------- EXPERIENCE ----------------------------------
-\section{Work Experience \normalsize\normalfont\itshape\textcolor{black!55}{(S: Situation · A: Action · R: Result)}}
+\section{Work Experience}
 
 \role{Data \& BI Analyst (Solution Delivery Executive)}{Zeapl.AI \textnormal{(Client: ExxonMobil)}}{Enterprise BI \& analytics consulting for Fortune 500 energy clients — Noida, India}{Jun 2024 – Present}
 \begin{itemize}
-  \item \sar{S} 5+ manual Excel reporting workflows spanned 3 business units.
-        \sar{A} Architected and deployed 20+ end-to-end BI and automation solutions.
-        \sar{R} Cut reporting cycle time \textbf{30\%} and freed \textbf{$\sim$15 hrs/week} of analyst capacity.
-  \item \sar{S} Leadership lacked a trusted single view of performance.
-        \sar{A} Built 8 Power BI dashboards on Star Schema models with DAX, real-time KPI tracking and end-to-end UAT.
-        \sar{R} Cut decision cycle time \textbf{40\%} at \textbf{99\%+} accuracy.
-  \item \sar{S} Accuracy gaps across 1M+ row datasets undermined trust in reporting.
-        \sar{A} Ran advanced SQL analysis (window functions, CTEs, subqueries) with structured cleaning, validation and reconciliation.
-        \sar{R} Lifted data accuracy \textbf{$\sim$25\%}.
-  \item \sar{S} Repetitive operational handoffs drove avoidable client cost.
-        \sar{A} Engineered 10 automated workflows integrating REST and WhatsApp Business APIs.
-        \sar{R} Cut operational costs \textbf{$\sim$20\%} annually.
-  \item \sar{S} Engagement losses stayed invisible in aggregate reporting.
-        \sar{A} Ran funnel, cohort and variance analysis with 10+ stakeholders to define 25+ KPIs.
-        \sar{R} Surfaced 3 drop-offs; product fixes lifted engagement \textbf{15\%} in 90 days.
+  \item Retired 5+ manual Excel reporting workflows across 3 business units by architecting and deploying \textbf{20+} end-to-end BI and automation solutions — cutting reporting cycle time \textbf{30\%} and freeing \textbf{$\sim$15 hrs/week} of analyst capacity.
+  \item Gave leadership a single trusted view of performance through \textbf{8} Power BI dashboards on Star Schema models with DAX, real-time KPI tracking and end-to-end UAT — cutting decision cycle time \textbf{40\%} at \textbf{99\%+} accuracy.
+  \item Closed accuracy gaps across \textbf{1M+ row} datasets with advanced SQL analysis (window functions, CTEs, subqueries) plus structured cleaning, validation and reconciliation — lifting data accuracy \textbf{$\sim$25\%}.
+  \item Eliminated repetitive operational handoffs by engineering \textbf{10} automated workflows on REST and WhatsApp Business APIs — cutting client operational costs \textbf{$\sim$20\%} annually.
+  \item Exposed \textbf{3} engagement drop-offs invisible in aggregate reporting via funnel, cohort and variance analysis with 10+ stakeholders and 25+ defined KPIs — resulting fixes lifted engagement \textbf{15\%} in 90 days.
 \end{itemize}
 
 \role{Business Analyst}{1Lattice}{Dashboard automation, KPI frameworks \& BI reporting — Noida, NCR}{Nov 2023 – May 2024}
 \begin{itemize}
-  \item \sar{S} 20+ BI requests were queued across 4 business units with loosely defined requirements.
-        \sar{A} Owned requirements gathering through delivery into SQL-driven operational dashboards.
-        \sar{R} Shipped every request on schedule.
-  \item \sar{S} Inconsistent metric definitions drove constant ad-hoc requests.
-        \sar{A} Built KPI measurement frameworks for 4+ business units, standardising 15+ reporting definitions for self-serve access.
-        \sar{R} Cut ad-hoc analytics requests \textbf{35\%}.
-  \item \sar{S} 5 weekly reports each took a 3-day manual turnaround across 5+ data sources.
-        \sar{A} Automated them with reusable Python (Pandas) ETL pipelines and Power BI scheduled refresh.
-        \sar{R} \textbf{Same-day} delivery, \textbf{$\sim$40\%} less manual prep.
+  \item Converted \textbf{20+} loosely defined BI requests across 4 business units into SQL-driven operational dashboards, owning requirements through delivery — shipping every request on schedule.
+  \item Ended constant ad-hoc reporting demands by building KPI frameworks for \textbf{4+} business units and standardising 15+ reporting definitions for self-serve access — cutting ad-hoc requests \textbf{35\%}.
+  \item Collapsed a 3-day manual turnaround on \textbf{5} weekly reports to \textbf{same-day} with reusable Python (Pandas) ETL pipelines and Power BI scheduled refresh — cutting manual data prep \textbf{$\sim$40\%}.
 \end{itemize}
 
 %------------------------- SKILLS --------------------------------------
 \section{Technical Skills}
-{\footnotesize
+{\small
 \begin{tabularx}{\textwidth}{@{}l@{\hspace{8pt}} L@{}}
   \textbf{BI \& Visualisation} & Power BI (DAX, Power Query, Data Modelling, Star Schema, Row-level Security), Tableau (working knowledge), Excel (Advanced, Pivot Tables, Power Query) \\[1pt]
   \textbf{Languages}           & SQL (Joins, CTEs, Window Functions, Subqueries, Stored Procedures), Python (Pandas, NumPy, Matplotlib) \\[1pt]
@@ -168,7 +149,7 @@ Owns the full Power BI lifecycle — Star Schema modelling, DAX, Power Query, pr
   \item Modelled 12 monthly acquisition cohorts in SQL for retention, churn and repeat-purchase behaviour; heatmaps and churn dashboards let the client target high-risk segments within 2 weeks.
 \end{itemize}
 
-\project{E-Commerce Sales Intelligence Dashboard (250K rows)}{\href{https://github.com/Mittal-99}{Portfolio · github.com/Mittal-99}}{2026}
+\project{\href{https://github.com/Mittal-99/ecommerce-powerbi-dashboard}{E-Commerce Sales Intelligence Dashboard (250K rows)}}{Portfolio}{2026}
 \begin{itemize}
   \item 3-page Power BI report (Executive Summary, Customer Analysis, Product Performance) on a Star Schema of 1 fact + 4 dimensions with 15+ DAX measures — YTD Revenue, MoM Growth\%, Running Total, Churn Rate\%.
   \item Power Query (M) pipeline exposed a risk hidden in revenue-only views: all 4 categories carry 40\%+ returns.
@@ -178,7 +159,7 @@ Owns the full Power BI lifecycle — Star Schema modelling, DAX, Power Query, pr
 \section{Certifications}
 \begin{tabularx}{\textwidth}{@{}L@{\hspace{10pt}} r@{}}
   \textbf{Advanced Certificate in Applied Data Science, ML \& IoT} — IIT Guwahati (E\&ICT Academy) & \textbf{2023} \\[1pt]
-  \textit{In progress:} Microsoft PL-300 (Power BI Data Analyst) · Microsoft AZ-900 (Azure Fundamentals) & \textbf{2026} \\
+  \textbf{Microsoft PL-300} (Power BI Data Analyst) · \textbf{Microsoft AZ-900} (Azure Fundamentals) & \textbf{2026} \\
 \end{tabularx}
 
 %------------------------- EDUCATION -----------------------------------

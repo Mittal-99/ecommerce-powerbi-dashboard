@@ -1,7 +1,8 @@
 # Résumé — Anushi Mittal (Data & BI Analyst)
 
-Single-page, ATS-friendly LaTeX résumé. Work experience is written in **STAR** format
-(Situation → Action → Result), with a legend next to the section heading.
+Single-page, ATS-friendly LaTeX résumé. Every work-experience bullet follows the **STAR**
+structure — situation, action, result — written as one flowing sentence rather than
+labelled parts.
 
 ## Files
 
@@ -30,7 +31,8 @@ Summary → Work Experience → Technical Skills → Key Projects → Certificat
 
 - **Accent colour** — `\definecolor{accent}{HTML}{1F4E79}` near the top.
 - **Roles** — `\role{Title}{Company}{Location & scope}{Dates}` followed by an `itemize`
-  block of `\sar{S} … \sar{A} … \sar{R} …` bullets.
-- **Projects** — `\project{Name}{Context}{Year}`.
+  block. Keep each bullet as: problem solved → what you built → measured result.
+- **Projects** — `\project{Name}{Context}{Year}`. To make a project title clickable, wrap
+  the name in `\href{url}{...}`, as the E-Commerce project does.
 - **Keeping it to one page** — the layout is tuned to fill exactly one A4 page. If you add
   a bullet, remove one elsewhere, or loosen `\linespread{0.95}` / the `geometry` margins.
