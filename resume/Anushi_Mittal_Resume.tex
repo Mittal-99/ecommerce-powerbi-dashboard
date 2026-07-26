@@ -1,6 +1,11 @@
 %=======================================================================
 %  Anushi Mittal — Data & BI Analyst Resume
-%  Single-page, ATS-friendly LaTeX template (STAR-structured experience bullets)
+%  Single-page, ATS-friendly LaTeX resume (STAR-structured experience)
+%
+%  ATS notes: single column, no tables, no icon fonts, no text boxes,
+%  no images, no headers/footers, plain-text contact line, standard
+%  section names, real selectable text with a linear reading order.
+%
 %  Compile with:  pdflatex Anushi_Mittal_Resume.tex
 %=======================================================================
 \documentclass[a4paper,10pt]{article}
@@ -12,136 +17,134 @@
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage{array}
-\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 
 %------------------------- COLOURS -------------------------------------
 \definecolor{accent}{HTML}{1F4E79}   % deep BI blue
 \definecolor{rulegrey}{HTML}{9AA5B1}
-\definecolor{body}{HTML}{1A1A1A}
-\color{body}
 
 \hypersetup{
   colorlinks=true,
   urlcolor=accent,
-  pdftitle={Anushi Mittal - Data \& BI Analyst},
+  pdftitle={Anushi Mittal - Data and BI Analyst},
   pdfauthor={Anushi Mittal},
-  pdfkeywords={Power BI, DAX, SQL, Python, Data Analyst, BI Analyst}
+  pdfsubject={Resume},
+  pdfkeywords={Data Analyst, BI Analyst, Business Intelligence, Power BI, DAX,
+    Power Query, Data Modelling, Star Schema, SQL, Python, Pandas, Excel,
+    Tableau, ETL, KPI Design, Cohort Analysis, Funnel Analysis, Dashboards},
+  pdflang={en-IN}
 }
 
 %------------------------- LAYOUT --------------------------------------
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\tabcolsep}{0pt}
 \linespread{0.95}\selectfont
 \raggedright
 
-% Ragged-right flexible column (stops tabularx from stretching word spacing)
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-
-% Section headings: small-caps, accent colour, thin rule underneath
+% Section headings: accent colour, thin rule underneath.
+% Plain capitalised words (no small caps) so parsers read them verbatim.
 \titleformat{\section}
-  {\color{accent}\scshape\large\bfseries}
-  {}{0em}{}[\vspace{-5pt}{\color{rulegrey}\rule{\textwidth}{0.7pt}}]
+  {\color{accent}\large\bfseries}
+  {}{0em}{}[\vspace{-5pt}{\color{rulegrey}\rule{\linewidth}{0.7pt}}]
 \titlespacing{\section}{0pt}{5pt}{3pt}
 
-% Bullet lists
+% Bullet lists — \textbullet is a text glyph, so it extracts cleanly
 \setlist[itemize]{
-  leftmargin=1.0em,
-  labelsep=0.4em,
-  topsep=1pt,
-  itemsep=1pt,
+  leftmargin=1.1em,
+  labelsep=0.45em,
+  topsep=1.5pt,
+  itemsep=1.5pt,
   parsep=0pt,
-  label=\textcolor{accent}{\small$\bullet$}
+  label=\textcolor{accent}{\textbullet}
 }
 
 %------------------------- HELPERS -------------------------------------
-% Two-column heading row: {left content}{right content}
+% One line with content left and dates right, no tabular involved:
+% justify this single line so \hfill pushes the date to the margin.
 \newcommand{\headrow}[2]{%
-  \begin{tabularx}{\textwidth}{@{}L r@{}}
-    #1 & #2 \\
-  \end{tabularx}%
+  {\parfillskip=0pt\relax\rightskip=0pt\relax #1\hfill #2\par}%
 }
 
-% Role heading: {Title}{Company / context}{Location & scope}{Dates}
+% Role: {Title}{Company / client}{Scope & location}{Dates}
 \newcommand{\role}[4]{%
-  \vspace{2pt}%
-  \headrow{\textbf{#1} \textnormal{|} #2}{\textbf{#4}}%
-  \vspace{-3pt}\\
-  {\small\itshape\textcolor{black!62}{#3}}%
+  \vspace{3pt}%
+  \headrow{\textbf{#1} | #2}{\textbf{#4}}%
+  \vspace{-1pt}%
+  {\small\itshape\textcolor{black!62}{#3}\par}%
 }
 
-% Project heading: {Name}{Context}{Year}
+% Project: {Name}{Context}{Year}
 \newcommand{\project}[3]{%
-  \vspace{2pt}%
-  \headrow{\textbf{#1} \textnormal{\textcolor{black!60}{· #2}}}{\textbf{#3}}%
-  \vspace{-2pt}
+  \vspace{3pt}%
+  \headrow{\textbf{#1} \textcolor{black!60}{| #2}}{\textbf{#3}}%
 }
+
+% Skills line: {Category}{Items}
+\newcommand{\skillline}[2]{\textbf{#1:} #2\par\vspace{1.5pt}}
 
 %=======================================================================
 \begin{document}
 
 %------------------------- HEADER --------------------------------------
+% Plain-text contact details on their own lines: no icons, no tables.
 \begin{center}
-  {\LARGE\bfseries\scshape\textcolor{accent}{Anushi Mittal}}\\[2pt]
-  {\small Data \& BI Analyst \textcolor{rulegrey}{$\vert$} Power BI · SQL · Python}\\[3pt]
+  {\LARGE\bfseries\textcolor{accent}{Anushi Mittal}}\\[3pt]
+  {\normalsize Data \& BI Analyst}\\[3pt]
   {\small
-    Noida, Uttar Pradesh, India \textcolor{rulegrey}{$\vert$}
-    \href{tel:+919027171166}{+91-9027171166} \textcolor{rulegrey}{$\vert$}
+    Noida, Uttar Pradesh, India \textcolor{rulegrey}{|}
+    \href{tel:+919027171166}{+91-9027171166} \textcolor{rulegrey}{|}
     \href{mailto:anushimittal015@gmail.com}{anushimittal015@gmail.com}
-  }\\[2pt]
+  }\\[3pt]
   {\small
-    \href{https://www.linkedin.com/in/anushimittal}{linkedin.com/in/anushimittal} \textcolor{rulegrey}{$\vert$}
-    \href{https://github.com/Mittal-99}{github.com/Mittal-99} \textcolor{rulegrey}{$\vert$}
+    \href{https://www.linkedin.com/in/anushimittal}{linkedin.com/in/anushimittal} \textcolor{rulegrey}{|}
+    \href{https://github.com/Mittal-99}{github.com/Mittal-99} \textcolor{rulegrey}{|}
     \href{https://mittal-99.github.io}{mittal-99.github.io}
   }
 \end{center}
-\vspace{-3pt}
+\vspace{-2pt}
 
 %------------------------- SUMMARY -------------------------------------
 \section{Professional Summary}
 Data \& BI Analyst with \textbf{2+ years} building enterprise-grade Business Intelligence for Fortune 500 clients including ExxonMobil.
-Owns the full Power BI lifecycle — Star Schema modelling, DAX, Power Query, production dashboards — cutting decision cycle time
+Owns the full Power BI lifecycle -- Star Schema modelling, DAX, Power Query, production dashboards -- cutting decision cycle time
 40\% and retiring manual Excel reporting. Advanced SQL on 1M+ row datasets with Python (Pandas) ETL automation and KPI design.
 
 %------------------------- EXPERIENCE ----------------------------------
 \section{Work Experience}
 
-\role{Data \& BI Analyst (Solution Delivery Executive)}{Zeapl.AI \textnormal{(Client: ExxonMobil)}}{Enterprise BI \& analytics consulting for Fortune 500 energy clients — Noida, India}{Jun 2024 – Present}
+\role{Data \& BI Analyst (Solution Delivery Executive)}{Zeapl.AI (Client: ExxonMobil)}{Enterprise BI \& analytics consulting for Fortune 500 energy clients -- Noida, India}{Jun 2024 -- Present}
 \begin{itemize}
-  \item Retired 5+ manual Excel reporting workflows across 3 business units by architecting and deploying \textbf{20+} end-to-end BI and automation solutions — cutting reporting cycle time \textbf{30\%} and freeing \textbf{$\sim$15 hrs/week} of analyst capacity.
-  \item Gave leadership a single trusted view of performance through \textbf{8} Power BI dashboards on Star Schema models with DAX, real-time KPI tracking and end-to-end UAT — cutting decision cycle time \textbf{40\%} at \textbf{99\%+} accuracy.
-  \item Closed accuracy gaps across \textbf{1M+ row} datasets with advanced SQL analysis (window functions, CTEs, subqueries) plus structured cleaning, validation and reconciliation — lifting data accuracy \textbf{$\sim$25\%}.
-  \item Eliminated repetitive operational handoffs by engineering \textbf{10} automated workflows on REST and WhatsApp Business APIs — cutting client operational costs \textbf{$\sim$20\%} annually.
-  \item Exposed \textbf{3} engagement drop-offs invisible in aggregate reporting via funnel, cohort and variance analysis with 10+ stakeholders and 25+ defined KPIs — resulting fixes lifted engagement \textbf{15\%} in 90 days.
+  \item Retired 5+ manual Excel reporting workflows across 3 business units by architecting and deploying \textbf{20+} end-to-end BI and automation solutions, cutting reporting cycle time \textbf{30\%} and freeing \textbf{15 hrs/week} of analyst capacity.
+  \item Gave leadership a single trusted view of performance through \textbf{8} Power BI dashboards on Star Schema models with DAX, real-time KPI tracking and end-to-end UAT, cutting decision cycle time \textbf{40\%} at \textbf{99\%+} accuracy.
+  \item Closed accuracy gaps across \textbf{1M+ row} datasets with advanced SQL analysis (window functions, CTEs, subqueries) plus structured cleaning, validation and reconciliation, lifting data accuracy \textbf{25\%}.
+  \item Eliminated repetitive operational handoffs by engineering \textbf{10} automated workflows on REST and WhatsApp Business APIs, cutting client operational costs \textbf{20\%} annually.
+  \item Exposed \textbf{3} engagement drop-offs invisible in aggregate reporting via funnel, cohort and variance analysis with 10+ stakeholders and 25+ defined KPIs; resulting fixes lifted engagement \textbf{15\%} in 90 days.
 \end{itemize}
 
-\role{Business Analyst}{1Lattice}{Dashboard automation, KPI frameworks \& BI reporting — Noida, NCR}{Nov 2023 – May 2024}
+\role{Business Analyst}{1Lattice}{Dashboard automation, KPI frameworks \& BI reporting -- Noida, NCR}{Nov 2023 -- May 2024}
 \begin{itemize}
-  \item Converted \textbf{20+} loosely defined BI requests across 4 business units into SQL-driven operational dashboards, owning requirements through delivery — shipping every request on schedule.
-  \item Ended constant ad-hoc reporting demands by building KPI frameworks for \textbf{4+} business units and standardising 15+ reporting definitions for self-serve access — cutting ad-hoc requests \textbf{35\%}.
-  \item Collapsed a 3-day manual turnaround on \textbf{5} weekly reports to \textbf{same-day} with reusable Python (Pandas) ETL pipelines and Power BI scheduled refresh — cutting manual data prep \textbf{$\sim$40\%}.
+  \item Converted \textbf{20+} loosely defined BI requests across 4 business units into SQL-driven operational dashboards, owning requirements through delivery and shipping every request on schedule.
+  \item Ended constant ad-hoc reporting demands by building KPI frameworks for \textbf{4+} business units and standardising 15+ reporting definitions for self-serve access, cutting ad-hoc requests \textbf{35\%}.
+  \item Collapsed a 3-day manual turnaround on \textbf{5} weekly reports to \textbf{same-day} with reusable Python (Pandas) ETL pipelines and Power BI scheduled refresh, cutting manual data prep \textbf{40\%}.
 \end{itemize}
 
 %------------------------- SKILLS --------------------------------------
+% Plain "Category: items" lines - the most reliably parsed skills format.
 \section{Technical Skills}
-{\footnotesize
-\begin{tabularx}{\textwidth}{@{}l@{\hspace{8pt}} L@{}}
-  \textbf{BI \& Visualisation} & Power BI Desktop \& Service (DAX, Power Query/M, Data Modelling, Star Schema, Row-level Security, Dataflows, Incremental Refresh, Deployment Pipelines, Paginated Reports), Tableau, Excel (Advanced, Pivot Tables, Power Query) \\[1pt]
-  \textbf{Languages}           & SQL (Joins, CTEs, Window Functions, Subqueries, Stored Procedures), Python (Pandas, NumPy, Matplotlib) \\[1pt]
-  \textbf{Analytics}           & KPI Design, Funnel Analysis, Cohort Analysis, Trend \& Variance Analysis, EDA, Statistical Analysis, A/B Testing \\[1pt]
-  \textbf{Data Engineering}    & ETL Pipelines, Data Cleaning \& Validation, Data Reconciliation, REST APIs, Workflow Automation, Data Visualization \\[1pt]
-  \textbf{Cloud (Azure)}       & Azure SQL Database, Blob \& Data Lake Storage, Synapse Analytics, Data Factory, Microsoft Entra ID, Azure Monitor, IaaS/PaaS/SaaS Models, Cloud Governance \& Cost Management \\[1pt]
-  \textbf{Tools}               & Power Automate, Git, JIRA, Confluence, Power BI Gateway, MS Office Suite \\
-\end{tabularx}}
+{\small
+\skillline{BI \& Visualisation}{Power BI (DAX, Power Query, Data Modelling, Star Schema, Row-level Security), Tableau, Excel (Advanced, Pivot Tables, Power Query)}
+\skillline{Languages}{SQL (Joins, CTEs, Window Functions, Subqueries, Stored Procedures), Python (Pandas, NumPy, Matplotlib)}
+\skillline{Analytics}{KPI Design, Funnel Analysis, Cohort Analysis, Trend \& Variance Analysis, EDA, Statistical Analysis, A/B Testing}
+\skillline{Data Engineering}{ETL Pipelines, Data Cleaning \& Validation, Data Reconciliation, REST APIs, Workflow Automation, Data Visualization}
+\skillline{Tools}{Power Automate, Git, JIRA, Confluence, Power BI Service, MS Office Suite}
+}
 
 %------------------------- PROJECTS ------------------------------------
 \section{Key Projects}
 
-\project{Rewards \& Loyalty Chatbot Analytics}{Zeapl.AI (ExxonMobil)}{2024 – Present}
+\project{Rewards \& Loyalty Chatbot Analytics}{Zeapl.AI (ExxonMobil)}{2024 -- Present}
 \begin{itemize}
-  \item SQL cohort models and Power BI funnel dashboards on chatbot performance, rewards redemption and user journeys — feeding weekly executive reporting and loyalty-programme strategy.
+  \item SQL cohort models and Power BI funnel dashboards on chatbot performance, rewards redemption and user journeys, feeding weekly executive reporting and loyalty-programme strategy.
 \end{itemize}
 
 \project{Customer Retention \& Cohort Analysis Dashboard}{Zeapl.AI}{2024}
@@ -151,21 +154,16 @@ Owns the full Power BI lifecycle — Star Schema modelling, DAX, Power Query, pr
 
 \project{\href{https://github.com/Mittal-99/ecommerce-powerbi-dashboard}{E-Commerce Sales Intelligence Dashboard (250K rows)}}{Portfolio}{2026}
 \begin{itemize}
-  \item 3-page Power BI report (Executive Summary, Customer Analysis, Product Performance) on a Star Schema of 1 fact + 4 dimensions with 15+ DAX measures — YTD Revenue, MoM Growth\%, Running Total, Churn Rate\%.
+  \item 3-page Power BI report (Executive Summary, Customer Analysis, Product Performance) on a Star Schema of 1 fact + 4 dimensions with 15+ DAX measures: YTD Revenue, MoM Growth\%, Running Total, Churn Rate\%.
   \item Power Query (M) pipeline exposed a risk hidden in revenue-only views: all 4 categories carry 40\%+ returns.
 \end{itemize}
 
 %------------------------- CERTIFICATIONS ------------------------------
 \section{Certifications}
-\begin{tabularx}{\textwidth}{@{}L@{\hspace{10pt}} r@{}}
-  \textbf{Advanced Certificate in Applied Data Science, ML \& IoT} — IIT Guwahati (E\&ICT Academy) & \textbf{2023} \\[1pt]
-  \textbf{Microsoft PL-300} (Power BI Data Analyst) · \textbf{Microsoft AZ-900} (Azure Fundamentals) & \textbf{2026} \\
-\end{tabularx}
+\headrow{\textbf{Advanced Certificate in Applied Data Science, ML \& IoT} -- IIT Guwahati (E\&ICT Academy)}{\textbf{2023}}
 
 %------------------------- EDUCATION -----------------------------------
 \section{Education}
-\begin{tabularx}{\textwidth}{@{}L@{\hspace{10pt}} r@{}}
-  \textbf{M.Sc. in Science} — Chaudhary Charan Singh University, Meerut, Uttar Pradesh & \textbf{2021 – 2023} \\
-\end{tabularx}
+\headrow{\textbf{M.Sc. in Science} -- Chaudhary Charan Singh University, Meerut, Uttar Pradesh}{\textbf{2021 -- 2023}}
 
 \end{document}
