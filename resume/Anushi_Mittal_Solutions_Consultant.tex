@@ -1,0 +1,154 @@
+%=======================================================================
+%  Anushi Mittal — Solutions Consultant Resume
+%  Tailored for: Solutions Consultant, Curlec by Razorpay (Malaysia)
+%
+%  Same ATS-safe template as the general resume: single column, no
+%  tables, no icon fonts, text-mode glyphs only, linear reading order.
+%
+%  Compile with:  pdflatex Anushi_Mittal_Solutions_Consultant.tex
+%=======================================================================
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[top=0.45in,bottom=0.4in,left=0.5in,right=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+%------------------------- COLOURS -------------------------------------
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{rulegrey}{HTML}{9AA5B1}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  pdftitle={Anushi Mittal - Solutions Consultant},
+  pdfauthor={Anushi Mittal},
+  pdfsubject={Resume},
+  pdfkeywords={Solutions Consultant, Solution Delivery, Technical Presales,
+    Technical Discovery, Requirements Elicitation, Enterprise Onboarding,
+    REST API, Integration, UAT, Stakeholder Management, SQL, Python,
+    Data Reconciliation, Fintech, Payments, Agile},
+  pdflang={en-IN}
+}
+
+%------------------------- LAYOUT --------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{0.95}\selectfont
+\raggedright
+
+\titleformat{\section}
+  {\color{accent}\large\bfseries}
+  {}{0em}{}[\vspace{-5pt}{\color{rulegrey}\rule{\linewidth}{0.7pt}}]
+\titlespacing{\section}{0pt}{5pt}{3pt}
+
+\setlist[itemize]{
+  leftmargin=1.1em,
+  labelsep=0.45em,
+  topsep=1.5pt,
+  itemsep=1.5pt,
+  parsep=0pt,
+  label=\textcolor{accent}{\textbullet}
+}
+
+%------------------------- HELPERS -------------------------------------
+\newcommand{\headrow}[2]{%
+  {\parfillskip=0pt\relax\rightskip=0pt\relax #1\hfill #2\par}%
+}
+
+\newcommand{\role}[4]{%
+  \vspace{3pt}%
+  \headrow{\textbf{#1} | #2}{\textbf{#4}}%
+  \vspace{-1pt}%
+  {\small\itshape\textcolor{black!62}{#3}\par}%
+}
+
+\newcommand{\project}[3]{%
+  \vspace{3pt}%
+  \headrow{\textbf{#1} \textcolor{black!60}{| #2}}{\textbf{#3}}%
+}
+
+\newcommand{\skillline}[2]{\textbf{#1:} #2\par\vspace{1.5pt}}
+
+%=======================================================================
+\begin{document}
+
+%------------------------- HEADER --------------------------------------
+\begin{center}
+  {\LARGE\bfseries\textcolor{accent}{Anushi Mittal}}\\[3pt]
+  {\normalsize Solution Delivery \& Technical Consulting}\\[3pt]
+  {\small
+    Noida, Uttar Pradesh, India \textcolor{rulegrey}{|}
+    \href{tel:+919027171166}{+91-9027171166} \textcolor{rulegrey}{|}
+    \href{mailto:anushimittal015@gmail.com}{anushimittal015@gmail.com}
+  }\\[3pt]
+  {\small
+    \href{https://www.linkedin.com/in/anushimittal}{linkedin.com/in/anushimittal} \textcolor{rulegrey}{|}
+    \href{https://github.com/Mittal-99}{github.com/Mittal-99} \textcolor{rulegrey}{|}
+    \href{https://mittal-99.github.io}{mittal-99.github.io}
+  }
+\end{center}
+\vspace{-2pt}
+
+%------------------------- SUMMARY -------------------------------------
+\section{Professional Summary}
+Client-facing Solution Delivery Executive with \textbf{2+ years} scoping, designing and delivering technical solutions for Fortune 500
+enterprises including ExxonMobil. Owns engagements end to end -- technical discovery, requirements elicitation, REST API integration,
+onboarding and UAT sign-off -- as the primary technical contact for enterprise stakeholders. Translates complex technical design for
+engineering and business audiences alike, and turns client feedback into product improvements.
+
+%------------------------- EXPERIENCE ----------------------------------
+\section{Work Experience}
+
+\role{Solution Delivery Executive (Data \& BI Analyst)}{Zeapl.AI (Client: ExxonMobil)}{Enterprise solution delivery and analytics consulting for Fortune 500 clients -- Noida, India}{Jun 2024 -- Present}
+\begin{itemize}
+  \item Ran technical discovery with \textbf{10+} enterprise stakeholders across operations, marketing and loyalty, eliciting and documenting requirements into \textbf{25+} KPI specifications and solution designs accepted through end-to-end UAT at \textbf{99\%+} accuracy.
+  \item Owned delivery of \textbf{20+} enterprise solutions as primary technical point of contact -- scoping, configuration, integration and go-live -- cutting client reporting cycle time \textbf{30\%} and freeing \textbf{15 hrs/week} of capacity.
+  \item Integrated \textbf{REST and WhatsApp Business APIs} into 10 automated client workflows, removing manual handoffs and cutting client operational costs \textbf{20\%} annually.
+  \item Built validation and reconciliation pipelines across \textbf{1M+ row} transactional datasets, resolving accuracy disputes and lifting data accuracy \textbf{25\%}.
+  \item Fed \textbf{3} customer funnel drop-offs, surfaced through funnel and cohort analysis, into the product roadmap; resulting changes lifted engagement \textbf{15\%} in 90 days.
+\end{itemize}
+
+\role{Business Analyst}{1Lattice}{Requirements, solution delivery \& process optimisation -- Noida, NCR}{Nov 2023 -- May 2024}
+\begin{itemize}
+  \item Translated \textbf{20+} loosely defined requests from 4 business units into documented technical specifications and delivered SQL-driven solutions, shipping every engagement on schedule.
+  \item Standardised \textbf{15+} metric definitions into self-serve reporting frameworks, cutting inbound ad-hoc requests \textbf{35\%} and freeing delivery capacity.
+  \item Streamlined internal workflows by automating \textbf{5} recurring reporting processes with Python (Pandas) pipelines and scheduled refresh, collapsing a 3-day turnaround to \textbf{same-day}.
+\end{itemize}
+
+%------------------------- SKILLS --------------------------------------
+\section{Technical Skills}
+{\small
+\skillline{Solution Consulting}{Technical Discovery, Enterprise Onboarding, Requirements Elicitation \& Documentation, Solution Design, UAT, Client Presentations, Stakeholder Management, Project \& Timeline Management}
+\skillline{Integration \& Architecture}{REST APIs, WhatsApp Business API, System Integration, Workflow Automation, ETL Pipelines, Data Reconciliation, Data Validation}
+\skillline{Data \& Analytics}{SQL (Joins, CTEs, Window Functions, Subqueries, Stored Procedures), Python (Pandas, NumPy), Power BI (DAX, Power Query, Data Modelling, Star Schema, Row-level Security), Tableau, Excel (Advanced)}
+\skillline{AI \& Productivity}{LLM assistants (ChatGPT) for proposal drafting, documentation and client communication; chatbot journey analytics}
+\skillline{Ways of Working}{Agile/Scrum, JIRA, Confluence, Git, Power Automate, Cross-functional Delivery, MS Office Suite}
+}
+
+%------------------------- PROJECTS ------------------------------------
+\section{Key Projects}
+
+\project{Rewards \& Loyalty Chatbot Analytics}{Zeapl.AI (ExxonMobil)}{2024 -- Present}
+\begin{itemize}
+  \item Built the analytics layer for a WhatsApp chatbot covering transaction journeys, rewards redemption and referral flows; SQL cohort models and funnel dashboards feed weekly executive reporting and loyalty-programme strategy.
+\end{itemize}
+
+\project{\href{https://github.com/Mittal-99/ecommerce-powerbi-dashboard}{E-Commerce Sales Intelligence Dashboard (250K rows)}}{Portfolio}{2026}
+\begin{itemize}
+  \item Modelled 250K transactions on a Star Schema (1 fact + 4 dimensions) with 15+ DAX measures covering revenue, churn and payment-method mix; Power Query pipeline exposed 40\%+ return rates across all categories, invisible in revenue-only views.
+\end{itemize}
+
+%------------------------- CERTIFICATIONS ------------------------------
+\section{Certifications}
+\headrow{\textbf{Advanced Certificate in Applied Data Science, ML \& IoT} -- IIT Guwahati (E\&ICT Academy)}{\textbf{2023}}
+
+%------------------------- EDUCATION -----------------------------------
+\section{Education}
+\headrow{\textbf{M.Sc. in Science} -- Chaudhary Charan Singh University, Meerut, Uttar Pradesh}{\textbf{2021 -- 2023}}
+
+\end{document}

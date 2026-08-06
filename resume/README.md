@@ -8,13 +8,21 @@ labelled parts.
 
 | File | Purpose |
 | --- | --- |
-| `Anushi_Mittal_Resume.tex` | Source |
-| `Anushi_Mittal_Resume.pdf` | Compiled output (1 page, A4) |
+| `Anushi_Mittal_Resume.tex` / `.pdf` | **General** Data & BI Analyst resume |
+| `Anushi_Mittal_Solutions_Consultant.tex` / `.pdf` | Tailored for **Solutions Consultant** (Curlec by Razorpay) |
+
+Both are one A4 page and share the same template and preamble. The tailored variant
+reframes the same facts toward technical presales and solution delivery: it leads with the
+"Solution Delivery Executive" title, foregrounds discovery, requirements, REST API
+integration, onboarding and UAT, and regroups skills under Solution Consulting /
+Integration & Architecture / Data & Analytics / AI & Productivity / Ways of Working.
+Nothing is claimed that the general resume does not support.
 
 ## Build
 
 ```bash
 pdflatex Anushi_Mittal_Resume.tex
+pdflatex Anushi_Mittal_Solutions_Consultant.tex
 ```
 
 Or upload the `.tex` to [Overleaf](https://overleaf.com) and hit Recompile.
@@ -53,6 +61,20 @@ Summary → Work Experience → Technical Skills → Key Projects → Certificat
 - **Skills** — `\skillline{Category}{comma, separated, items}`.
 - **Keeping it to one page** — the layout is tuned to fill exactly one A4 page. If you add
   a bullet, remove one elsewhere, or loosen `\linespread{0.95}` / the `geometry` margins.
+
+## Gaps against the Curlec / Razorpay JD
+
+Deliberately **not** written into the tailored resume, because there is no evidence for
+them and inventing them would not survive a screen:
+
+- **Malay fluency** — a stated must-have for the role. No language line was added.
+- **Mandarin** — listed as highly desirable.
+- **Payments domain** — PCI DSS, tokenization, cards / e-wallets / FPX, the end-to-end
+  payment lifecycle. The nearest genuine touchpoints are data reconciliation, REST API
+  integration and the payment-method mix analysis in the e-commerce project.
+- **Location / work authorisation** — the role is Malaysia-based.
+
+Add a `Languages` line and any payments exposure if these apply.
 
 ## Parked content
 
